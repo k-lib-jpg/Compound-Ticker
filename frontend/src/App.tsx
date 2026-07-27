@@ -1,11 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3000/hello")
+      .then((response) => response.json())
+      .then((data) => {
+        setMessage(data.message);
+      });
+  }, []);
+
   return (
-    <>
-      <h1>Compound Ticker</h1>
-    </>
-  )
+    <div>
+      <h1>{message}</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;

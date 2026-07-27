@@ -1,16 +1,16 @@
 import Fastify from "fastify";
+import cors from "@fastify/cors";
 
 const app = Fastify();
 
-app.get("/", async () => {
-  return { message: "Hello Fastify!" };
+await app.register(cors, {
+  origin: "http://localhost:5173",
 });
 
-app.listen({ port: 3000 }, (err, address) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-
-  console.log(`Server running at ${address}`);
+app.get("/hello", async () => {
+  return {
+    message: "Hello Fastify!"
+  };
 });
+
+app.listen({ port: 3000 });
