@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () =>  {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -12,9 +13,21 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>{message}</h1>
-    </div>
+    <>
+      <div className="container">
+        <header className="header">
+          <h1 className="logo">Stock Compare</h1>
+          <ul className="nav">
+            <li><a href="/">Compare Stocks</a></li>
+            <li><a href="/">Manage Portfolios</a></li>
+            <li><a href="/">how to use</a></li>
+            <li><a href="/">login</a></li>
+          </ul>
+        </header>
+        
+        <h1>{message}</h1>
+      </div>
+    </>
   );
 }
 
