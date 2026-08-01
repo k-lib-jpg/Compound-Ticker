@@ -34,9 +34,28 @@
   max-width:1200px;
   padding:0 15px;
   width:100%;
+  text-align: center;
 }
 .container:after {
-    clear: both;
-    content: "";
-    display: table;
+  clear: both;
+  content: "";
+  display: table;
+}
+.chart-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.chart-placeholder {
+  height: 400px;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8f8f8;
+  color: #666;
+  font-size: 24px;
 }

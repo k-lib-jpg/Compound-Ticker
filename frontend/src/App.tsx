@@ -19,11 +19,10 @@ const App = () =>  {
     <>
       <div className="container">
         <header className="header">
-          <h1 className="logo">Stock Compare</h1>
+          <h1 className="logo">Yieldex</h1>
           <ul className="nav">
             <li><a href="/">Compare Stocks</a></li>
             <li><a href="/">Manage Portfolios</a></li>
-            <li><a href="/">how to use</a></li>
             <li><a href="/">Sign In</a></li>
           </ul>
         </header>
@@ -35,9 +34,15 @@ const App = () =>  {
                 return <option key={country}>{country}</option>;
               })}
           </select>
+          <p>銘柄</p>
           <input
             type="text"
             placeholder="銘柄コードを入力"
+          />
+          <p>株数</p>
+          <input
+            type="number"
+            placeholder="株数を入力"
           />
           <label htmlFor="datetime">日時を指定</label>
           <input
@@ -47,14 +52,20 @@ const App = () =>  {
             onChange={(e) => setDateTime(e.target.value)}
           />
           <p>選択日時: {dateTime}</p>
-          <button>結果の表示</button>
+          <button>決定</button>
         </section>
+        <section className="chart-container">
+          <h2>株価チャート</h2>
 
+          <div className="chart-placeholder">
+            グラフ表示エリア
+          </div>
+        </section>
         <section>
-          <h2>結果</h2>
+          <h2>詳細</h2>
             <p>銘柄：----</p>
             <p>総利益：---</p>
-            <p>株価：---</p>
+            <p>キャピタルゲイン：---</p>
             <p>配当金：---</p>
         </section>
       </main>
