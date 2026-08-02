@@ -56,7 +56,7 @@ const App = () =>  {
         </section>
         <section className="chart-container">
           <h2>株価チャート</h2>
-
+          <p>DRIP切り替え<button>DRIP</button></p>
           <div className="chart-placeholder">
             グラフ表示エリア
           </div>
@@ -64,9 +64,13 @@ const App = () =>  {
         <section>
           <h2>詳細</h2>
             <p>銘柄：----</p>
-            <p>総利益：---</p>
+            <p>株数：---</p>
+            <p>開始株価：---</p>
+            <p>終了株価：---</p>
             <p>キャピタルゲイン：---</p>
             <p>配当金：---</p>
+            <p>総利益：---</p>
+            <p>総利益率：---</p>      
         </section>
       </main>
       </div>
