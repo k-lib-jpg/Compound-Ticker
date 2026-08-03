@@ -28,31 +28,49 @@ const App = () =>  {
         </header>
         <h1>{message}</h1>
         <main>
-        <section>
-          <select>
-              {countries.map((country) => {
-                return <option key={country}>{country}</option>;
-              })}
-          </select>
-          <p>銘柄</p>
-          <input
-            type="text"
-            placeholder="銘柄コードを入力"
-          />
-          <p>株数</p>
-          <input
-            type="number"
-            placeholder="株数を入力"
-          />
-          <label htmlFor="datetime">日時を指定</label>
-          <input
-            id="datetime"
-            type="datetime-local"
-            value={dateTime}
-            onChange={(e) => setDateTime(e.target.value)}
-          />
-          <p>選択日時: {dateTime}</p>
-          <button>決定</button>
+        <section className="stock-input-container">
+          <div className="stock-input">
+            <label>銘柄</label>
+            <select>
+                {countries.map((country) => {
+                  return <option key={country}>{country}</option>;
+                })}
+            </select>
+            <input
+              type="text"
+              placeholder="銘柄コードを入力"
+            />
+          </div>
+          <div className="stock-input">
+            <label>株数</label>
+            <input
+              type="number"
+              placeholder="株数を入力"
+            />
+          </div>
+          <div className="stock-input">
+            <label htmlFor="startdate">開始期間</label>
+            <input
+              id="startdate"
+              type="datetime-local"
+              value={dateTime}
+              onChange={(e) => setDateTime(e.target.value)}
+            />
+            <p>選択日時: {dateTime}</p>
+          </div>
+          <div className="stock-input">
+            <label htmlFor="enddate">終了期間</label>
+            <input
+              id="enddate"
+              type="datetime-local"
+              value={dateTime}
+              onChange={(e) => setDateTime(e.target.value)}
+            />
+            <p>選択日時: {dateTime}</p>
+          </div>
+          <div className="stock-input">
+            <button>決定</button>
+          </div>
         </section>
         <section className="chart-container">
           <h2>株価チャート</h2>
