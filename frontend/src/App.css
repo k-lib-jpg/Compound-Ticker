@@ -70,3 +70,12 @@
   color: #666;
   font-size: 24px;
 }
+.stock-details {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+  margin-left: 0;
+  align-self: flex-start;
+}
