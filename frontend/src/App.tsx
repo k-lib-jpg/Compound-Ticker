@@ -19,10 +19,10 @@ const App = () =>  {
     <>
       <div className="container">
         <header className="header">
-          <h1 className="logo">Yieldex</h1>
+          <h1 className="logo"><a href="/">Yieldex</a></h1>
           <ul className="nav">
-            <li><a href="/">Compare Stocks</a></li>
-            <li><a href="/">Manage Portfolios</a></li>
+            <li><a href="/">Asset Portfolios</a></li>
+            <li><a href="/">Dividend Portfolios</a></li>
             <li><a href="/">Sign In</a></li>
           </ul>
         </header>
