@@ -49,27 +49,7 @@ const App = () =>  {
             />
           </div>
           <div className="stock-input">
-            <label htmlFor="startdate">開始期間</label>
-            <input
-              id="startdate"
-              type="datetime-local"
-              value={dateTime}
-              onChange={(e) => setDateTime(e.target.value)}
-            />
-            <p>選択日時: {dateTime}</p>
-          </div>
-          <div className="stock-input">
-            <label htmlFor="enddate">終了期間</label>
-            <input
-              id="enddate"
-              type="datetime-local"
-              value={dateTime}
-              onChange={(e) => setDateTime(e.target.value)}
-            />
-            <p>選択日時: {dateTime}</p>
-          </div>
-          <div className="stock-input">
-            <button>決定</button>
+            <button>追加</button>
           </div>
         </section>
         <section className="chart-container">
@@ -77,6 +57,28 @@ const App = () =>  {
           <p>DRIP切り替え<button>DRIP</button></p>
           <div className="chart-placeholder">
             グラフ表示エリア
+          </div>
+          <div className="stock-period-container">
+            <div className="stock-period">
+              <label htmlFor="startdate">開始期間</label>
+              <input
+                id="startdate"
+                type="datetime-local"
+                value={dateTime}
+                onChange={(e) => setDateTime(e.target.value)}
+              />
+              <p>選択日時: {dateTime}</p>
+            </div>
+            <div className="stock-period">
+              <label htmlFor="enddate">終了期間</label>
+              <input
+                id="enddate"
+                type="datetime-local"
+                value={dateTime}
+                onChange={(e) => setDateTime(e.target.value)}
+              />
+              <p>選択日時: {dateTime}</p>
+            </div>
           </div>
         </section>
         <section className="stock-details">

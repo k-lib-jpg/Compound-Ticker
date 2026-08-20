@@ -76,6 +76,16 @@
   color: #666;
   font-size: 24px;
 }
+.stock-period-container {
+  display: flex;
+  justify-content: space-between;
+}
+.stock-period {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
 .stock-details {
   width: 100%;
   border: 1px solid #ccc;
