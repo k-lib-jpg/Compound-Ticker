@@ -27,72 +27,85 @@ const App = () =>  {
           </ul>
         </header>
         <h1>{message}</h1>
-        <main>
-        <section className="stock-input-container">
-          <div className="stock-input">
-            <label>銘柄</label>
-            <select>
-                {countries.map((country) => {
-                  return <option key={country}>{country}</option>;
-                })}
-            </select>
-            <input
-              type="text"
-              placeholder="銘柄コードを入力"
-            />
-          </div>
-          <div className="stock-input">
-            <label>株数</label>
-            <input
-              type="number"
-              placeholder="株数を入力"
-            />
-          </div>
-          <div className="stock-input">
-            <button>追加</button>
-          </div>
-        </section>
-        <section className="chart-container">
-          <h2>株価チャート</h2>
-          <p>DRIP切り替え<button>DRIP</button></p>
-          <div className="chart-placeholder">
-            グラフ表示エリア
-          </div>
-          <div className="stock-period-container">
-            <div className="stock-period">
-              <label htmlFor="startdate">開始期間</label>
-              <input
-                id="startdate"
-                type="datetime-local"
-                value={dateTime}
-                onChange={(e) => setDateTime(e.target.value)}
-              />
-              <p>選択日時: {dateTime}</p>
+          <main>
+            <section className="stock-input-container">
+              <div className="stock-input">
+                <label>銘柄</label>
+                <select>
+                    {countries.map((country) => {
+                      return <option key={country}>{country}</option>;
+                    })}
+                </select>
+                <input
+                  type="text"
+                  placeholder="銘柄コードを入力"
+                />
+              </div>
+              <div className="stock-input">
+                <label>株数</label>
+                <input
+                  type="number"
+                  placeholder="株数を入力"
+                />
+              </div>
+              <div className="stock-input">
+                <button>追加</button>
+              </div>
+            </section>
+            <section className="chart-container">
+              <h2>株価チャート</h2>
+              <p>DRIP切り替え<button>DRIP</button></p>
+              <div className="chart-placeholder">
+                グラフ表示エリア
+              </div>
+              <div className="stock-period-container">
+                <div className="stock-period">
+                  <label htmlFor="startdate">開始期間</label>
+                  <input
+                    id="startdate"
+                    type="datetime-local"
+                    value={dateTime}
+                    onChange={(e) => setDateTime(e.target.value)}
+                  />
+                  <p>選択日時: {dateTime}</p>
+                </div>
+                <div className="stock-period">
+                  <label htmlFor="enddate">終了期間</label>
+                  <input
+                    id="enddate"
+                    type="datetime-local"
+                    value={dateTime}
+                    onChange={(e) => setDateTime(e.target.value)}
+                  />
+                  <p>選択日時: {dateTime}</p>
+                </div>
+              </div>
+            </section>
+            <div className="stock-details-container">
+              <section className="stock-details">
+                <h2>詳細</h2>
+                <p>銘柄：----</p>
+                <p>株数：---</p>
+                <p>開始株価：---</p>
+                <p>終了株価：---</p>
+                <p>キャピタルゲイン：---</p>
+                <p>配当金：---</p>
+                <p>総利益：---</p>
+                <p>総利益率：---</p>
+              </section>
+              <section className="stock-details">
+                <h2>詳細</h2>
+                <p>銘柄：----</p>
+                <p>株数：---</p>
+                <p>開始株価：---</p>
+                <p>終了株価：---</p>
+                <p>キャピタルゲイン：---</p>
+                <p>配当金：---</p>
+                <p>総利益：---</p>
+                <p>総利益率：---</p>
+              </section>
             </div>
-            <div className="stock-period">
-              <label htmlFor="enddate">終了期間</label>
-              <input
-                id="enddate"
-                type="datetime-local"
-                value={dateTime}
-                onChange={(e) => setDateTime(e.target.value)}
-              />
-              <p>選択日時: {dateTime}</p>
-            </div>
-          </div>
-        </section>
-        <section className="stock-details">
-          <h2>詳細</h2>
-          <p>銘柄：----</p>
-          <p>株数：---</p>
-          <p>開始株価：---</p>
-          <p>終了株価：---</p>
-          <p>キャピタルゲイン：---</p>
-          <p>配当金：---</p>
-          <p>総利益：---</p>
-          <p>総利益率：---</p>
-        </section>
-      </main>
+        </main>
       </div>
     </>
   );
